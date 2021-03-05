@@ -6,6 +6,7 @@ const app = express();
 const hbs = require("hbs");
 const port = process.env.PORT || 8000;
 require("./db/conn")
+require("dotenv").config()
 
 const employeeRouter = require("./router/employee")
 const static_path = path.join(__dirname, "../public");
