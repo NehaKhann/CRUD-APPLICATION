@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{>headerlinks}}
+  </head>
+  <body>
+
+<section id="cover" class="min-vh-100">
+    <div id="cover-caption">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                <div class="alert-danger">{{error}}</div>
+                    <h1 class="display-4 py-2 text-truncate">{{titlename}}</h1>
+                    <div class="px-2">
+                        
+                        <form action="/" method="POST" autocomplete="off" class="justify-content-center">
+                       <input type="hidden" name="_id" value="{{employee._id}}"/>
+
+                            <div class="form-group">
+                                <label class="sr-only">Full Name</label>
+                                <input type="text" class="form-control" name="Fullname" placeholder="Full Name" value="{{employee.Fullname}}">
+                           
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Email</label>
+                                  <div class="text-danger">{{employee.emailerror}}</div>
+                                <input type="text" class="form-control" name="Email" placeholder="Email" value="{{employee.Email}}">
+                              
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Mobile</label>
+                                <input type="text" class="form-control" name="Mobile" placeholder="Mobile" value="{{employee.Mobile}}">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">City</label>
+                                <input type="text" class="form-control" name="City" placeholder="City" value="{{employee.City}}">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-align-justify"> Submit</i></button>
+                            <a class="btn btn-primary btn-lg" href="/list"><i class="fa fa-list-alt"> View All</i></a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  </body>
+</html>

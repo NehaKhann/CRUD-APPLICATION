@@ -1,0 +1,23 @@
+{
+  "name": "complete-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Neha Khan",
+  "license": "ISC",
+  "engines": {
+    "node": "12.18.0"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "mongoose": "^5.11.12",
+    "validator": "^13.5.2"
+  }
+}

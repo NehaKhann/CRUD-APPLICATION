@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{>headerlinks}}
+  </head>
+  <body>
+      <h3><a class="btn btn-secondary" href="/"> <i class="fa fa-plus" aria-hidden="true"></i> Create New </a> Employee List</h3>
+ <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>City</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+ {{#each list}}
+ <tr>
+     <td>{{this.Fullname}}</td>
+     <td>{{this.Email}}</td>
+     <td>{{this.Mobile}}</td>
+     <td>{{this.City}}</td>
+     <td>
+         <a href="/{{this._id}}"> <i class="fa fa-pencil-alt fa-lg" aria-hidden="true"></i> </a>
+
+         <a href="/delete/{{this._id}}" onClick="return confirm('Are you sure you want to delete the record?')"> <i class="fa fa-trash fa-lg" aria-hidden="true"></i> </a>
+     </td>
+
+ </tr>
+ {{/each}}
+    </tbody>
+  </table>
+  </body>
+</html>
