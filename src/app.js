@@ -4,7 +4,13 @@ const path = require("path");
 
 const app = express();
 const hbs = require("hbs");
-const port = process.env.PORT || 8000;
+
+//SINCE PORT 80 ALSO RUNS BY SIMPLY TYPING  "localhost:"
+const port = process.env.PORT || 80;
+
+
+
+
 require("./db/conn")
 require("dotenv").config()
 
