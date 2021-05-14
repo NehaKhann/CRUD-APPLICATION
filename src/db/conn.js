@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 
   //database connection
 
-  mongoose
-    .connect(process.env.MONGO_CONN_URL, {
+  mongoose.connect("mongodb://localhost:27017/CRUD-APPLICATION", {
       useCreateIndex: true,
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useFindAndModify: true,
+      useFindAndModify: false,
+      
     })
     .then(() => {
       console.log("Database connected");
